@@ -1,0 +1,6 @@
+{
+  "parent":"shinsei:item/standard_item",
+  "textures":{
+    "layer0":"shinsei:items/book_hoe"
+  }
+}

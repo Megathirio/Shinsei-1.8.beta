@@ -1,0 +1,124 @@
+< en_US.lang - English localization file for the mod Shinsei >
+
+# Creative Tabs
+itemGroup.shinsei:ore_tab=Shinsei Ores
+itemGroup.shinsei:blocks_tab=Shinsei Blocks
+itemGroup.shinsei:tools_tab=Shinsei Tools
+itemGroup.shinsei:food_tab=Shinsei Food
+itemGroup.shinsei:items_tab=Shinsei Items
+
+#Ores
+tile.acanthite_ore.name=Acanthite
+tile.bauxite_ore.name=Bauxite
+tile.halite_ore.name=Halite
+tile.meteorite.name=Meteorite
+
+#Blocks
+tile.aluminum_block.name=Aluminum Block
+tile.silver_block.name=Silver Block
+
+tile.brick.gray.name=Gray Bricks
+tile.brick.tan.name=Tan Bricks
+tile.brick.vari.name=Variegated Bricks
+tile.brick.basalt.name=Basalt Bricks
+tile.brick.graphite.name=Graphite Bricks
+
+tile.marble.white.name=White Marble
+tile.marble.orange.name=Orange Marble
+tile.marble.magenta.name=Magenta Marble
+tile.marble.ltblue.name=Light Blue Marble
+tile.marble.yellow.name=Yellow Marble
+tile.marble.lime.name=Lime Marble
+tile.marble.pink.name=Pink Marble
+tile.marble.gray.name=Gray Marble
+tile.marble.silver.name=Silver Marble
+tile.marble.cyan.name=Cyan Marble
+tile.marble.purple.name=Purple Marble
+tile.marble.blue.name=Blue Marble
+tile.marble.brown.name=Brown Marble
+tile.marble.green.name=Green Marble
+tile.marble.red.name=Red Marble
+tile.marble.black.name=Black Marble
+
+tile.granite.white.name=White Granite
+tile.granite.orange.name=Orange Granite
+tile.granite.magenta.name=Magenta Granite
+tile.granite.ltblue.name=Light Blue Granite
+tile.granite.yellow.name=Yellow Granite
+tile.granite.lime.name=Lime Granite
+tile.granite.pink.name=Pink Granite
+tile.granite.gray.name=Gray Granite
+tile.granite.silver.name=Silver Granite
+tile.granite.cyan.name=Cyan Granite
+tile.granite.purple.name=Purple Granite
+tile.granite.blue.name=Blue Granite
+tile.granite.brown.name=Brown Granite
+tile.granite.green.name=Green Granite
+tile.granite.red.name=Red Granite
+tile.granite.black.name=Black Granite
+
+tile.siding.white.name=White Siding
+tile.siding.orange.name=Orange Siding
+tile.siding.magenta.name=Magenta Siding
+tile.siding.ltblue.name=Light Blue Siding
+tile.siding.yellow.name=Yellow Siding
+tile.siding.lime.name=Lime Siding
+tile.siding.pink.name=Pink Siding
+tile.siding.gray.name=Gray Siding
+tile.siding.silver.name=Silver Siding
+tile.siding.cyan.name=Cyan Siding
+tile.siding.purple.name=Purple Siding
+tile.siding.blue.name=Blue Siding
+tile.siding.brown.name=Brown Siding
+tile.siding.green.name=Green Siding
+tile.siding.red.name=Red Siding
+tile.siding.black.name=Black Siding
+
+#Items
+item.book_shinsei.name=Shinsei Vol. I
+
+#Dusts
+item.aluminum_dust.name=Aluminum Dust
+item.silver_dust.name=Silver Dust
+
+#Nuggets
+item.aluminum_nugget.name=Aluminum Nugget
+item.silver_nugget.name=Silver Nugget
+
+#Ingots
+item.aluminum_ingot.name=Aluminum Ingot
+item.silver_ingot.name=Silver Ingot
+
+#Food
+item.cured_beef.name=Cured Beef
+item.cured_pork.name=Cured Pork
+item.apple.name=Apple
+
+item.salt.name=Salt
+
+item.split_wood.name=Split Wood
+
+#Tools
+item.book_axe.name=Forestry Vol. I
+item.book_hoe.name=Agronomy Vol. I
+item.book_pickaxe.name=Mineralogy Vol. I
+item.book_shovel.name=Geology Vol. I
+item.book_sword.name=Hoplology Vol. I
+
+item.bone_axe.name=Bone Axe
+item.flint_axe.name=Flint Axe
+item.silver_axe.name=Silver Axe
+item.silver_hoe.name=Silver Hoe
+item.silver_pickaxe.name=Silver Pickaxe
+item.silver_shovel.name=Silver Shovel
+item.silver_sword.name=Silver Sword
+
+item.silver_axe_blade.name=Silver Axe Blade
+item.silver_hoe_blade.name=Silver Hoe Blade
+item.silver_pickaxe_blade.name=Silver Pickaxe Blade
+item.silver_shovel_blade.name=Silver Shovel Blade
+item.silver_sword_blade.name=Silver Sword Blade
+
+item.iron_hammer.name=Iron Hammer
+
+item.tool_handle_wood.name=Wooden Tool Handle

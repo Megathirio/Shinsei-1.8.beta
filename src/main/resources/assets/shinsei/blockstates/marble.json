@@ -1,0 +1,20 @@
+{
+	"variants": {
+		"type=white": { "model":"shinsei:marble_white" },
+	    "type=orange": { "model":"shinsei:marble_orange" },
+	    "type=magenta": { "model":"shinsei:marble_magenta" },
+	    "type=ltblue": { "model":"shinsei:marble_ltblue" },
+	    "type=yellow": { "model":"shinsei:marble_yellow" },
+	    "type=lime": { "model":"shinsei:marble_lime" },
+	    "type=pink": { "model":"shinsei:marble_pink" },
+	    "type=gray": { "model":"shinsei:marble_gray" },
+	    "type=silver": { "model":"shinsei:marble_silver" },
+	    "type=cyan": { "model":"shinsei:marble_cyan" },
+   	    "type=purple": { "model":"shinsei:marble_purple" },
+        "type=blue": { "model":"shinsei:marble_blue" },
+	    "type=brown": { "model":"shinsei:marble_brown" },
+	    "type=green": { "model":"shinsei:marble_green" },
+	    "type=red": { "model":"shinsei:marble_red" },
+		"type=black": { "model":"shinsei:marble_black" }
+	}
+}

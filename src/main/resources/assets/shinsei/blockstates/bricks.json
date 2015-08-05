@@ -1,0 +1,9 @@
+{
+	"variants": {
+		"type=gray": { "model":"shinsei:bricks_gray" },
+	    "type=tan": { "model":"shinsei:bricks_tan" },
+        "type=vari": { "model":"shinsei:bricks_vari" },
+	    "type=basalt": { "model":"shinsei:bricks_basalt" },
+	    "type=graphite": { "model":"shinsei:bricks_graphite" }
+	}
+}
