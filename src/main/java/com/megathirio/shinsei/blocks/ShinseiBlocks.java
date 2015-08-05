@@ -6,6 +6,9 @@ import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
+import java.util.HashMap;
+import java.util.Set;
+
 public class ShinseiBlocks {
 
     public static Block aluminumBlock;
@@ -64,9 +67,21 @@ public class ShinseiBlocks {
     public static Block gypsumBlock;
     public static Block haliteBlock;
 
+    public static HashMap<Block, String> testMap = new HashMap<Block, String>();
+    public static Set<Block> testSet = testMap.keySet();
+
     public static void createBlocks(){
+        testMap.put(aluminumBlock, "aluminum_block");
+        testMap.put(antimonyBlock, "antinmony_block");
+
+        for (Block test : testSet) {
+            String name = testMap.get(test);
+            GameRegistry.registerBlock(test = new BaseBlock(name), name);
+        }
+/*
         GameRegistry.registerBlock(aluminumBlock = new BaseBlock("aluminum_block"), "aluminum_block");
         GameRegistry.registerBlock(antimonyBlock = new BaseBlock("antimony_block"), "antimony_block");
+*/
         GameRegistry.registerBlock(bariumBlock = new BaseBlock("barium_block"), "barium_block");
         GameRegistry.registerBlock(bismuthBlock = new BaseBlock("bismuth_block"), "bismuth_block");
         GameRegistry.registerBlock(brassBlock = new BaseBlock("brass_block"), "brass_block");
