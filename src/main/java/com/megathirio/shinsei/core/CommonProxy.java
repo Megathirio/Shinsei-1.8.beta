@@ -15,7 +15,6 @@ public class CommonProxy {
     public void preInit(FMLPreInitializationEvent e){
         ShinseiItems.createItems();
         ShinseiBlocks.createBlocks();
-        ShinseiOres.addOre();
         ShinseiOres.createOres();
     }
 
