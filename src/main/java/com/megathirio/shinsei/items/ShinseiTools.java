@@ -38,21 +38,21 @@ public class ShinseiTools {
         GameRegistry.registerItem(bookSword = new ContainerItem("book_sword").setCreativeTab(ShinseiTabs.TOOLS_TAB), "book_sword");
         GameRegistry.registerItem(boneAxe = new PrimitiveAxe("bone_axe", ShinseiMaterials.materialBone), "bone_axe");
         GameRegistry.registerItem(flintAxe = new PrimitiveAxe("flint_axe", ShinseiMaterials.materialFlint), "flint_axe");
-        GameRegistry.registerItem(silverAxe = new ShinseiAxe(Names.metals.SILVER + "_axe", ShinseiMaterials.materialSilver), Names.metals.SILVER + "_axe");
-        GameRegistry.registerItem(silverHoe = new ShinseiHoe(Names.metals.SILVER + "_hoe", ShinseiMaterials.materialSilver), Names.metals.SILVER + "_hoe");
-        GameRegistry.registerItem(silverPickaxe = new ShinseiPickaxe(Names.metals.SILVER + "_pickaxe", ShinseiMaterials.materialSilver), Names.metals.SILVER + "_pickaxe");
-        GameRegistry.registerItem(silverShovel = new ShinseiShovel(Names.metals.SILVER + "_shovel", ShinseiMaterials.materialSilver), Names.metals.SILVER + "_shovel");
-        GameRegistry.registerItem(silverSword = new ShinseiSword(Names.metals.SILVER + "_sword", ShinseiMaterials.materialSilver), Names.metals.SILVER + "_sword");
+        GameRegistry.registerItem(silverAxe = new ShinseiAxe(Names.materials.SILVER + "_axe", ShinseiMaterials.materialSilver), Names.materials.SILVER + "_axe");
+        GameRegistry.registerItem(silverHoe = new ShinseiHoe(Names.materials.SILVER + "_hoe", ShinseiMaterials.materialSilver), Names.materials.SILVER + "_hoe");
+        GameRegistry.registerItem(silverPickaxe = new ShinseiPickaxe(Names.materials.SILVER + "_pickaxe", ShinseiMaterials.materialSilver), Names.materials.SILVER + "_pickaxe");
+        GameRegistry.registerItem(silverShovel = new ShinseiShovel(Names.materials.SILVER + "_shovel", ShinseiMaterials.materialSilver), Names.materials.SILVER + "_shovel");
+        GameRegistry.registerItem(silverSword = new ShinseiSword(Names.materials.SILVER + "_sword", ShinseiMaterials.materialSilver), Names.materials.SILVER + "_sword");
 
-        GameRegistry.registerItem(silverAxeBlade = new BaseItem(Names.metals.SILVER + "_axe_blade").setCreativeTab(ShinseiTabs.TOOLS_TAB), Names.metals.SILVER + "_axe_blade");
-        GameRegistry.registerItem(silverHoeBlade = new BaseItem(Names.metals.SILVER + "_hoe_blade").setCreativeTab(ShinseiTabs.TOOLS_TAB), Names.metals.SILVER + "_hoe_blade");
-        GameRegistry.registerItem(silverPickaxeBlade = new BaseItem(Names.metals.SILVER + "_pickaxe_blade").setCreativeTab(ShinseiTabs.TOOLS_TAB), Names.metals.SILVER + "_pickaxe_blade");
-        GameRegistry.registerItem(silverShovelBlade = new BaseItem(Names.metals.SILVER + "_shovel_blade").setCreativeTab(ShinseiTabs.TOOLS_TAB), Names.metals.SILVER + "_shovel_blade");
-        GameRegistry.registerItem(silverSwordBlade = new BaseItem(Names.metals.SILVER + "_sword_blade").setCreativeTab(ShinseiTabs.TOOLS_TAB), Names.metals.SILVER + "_sword_blade");
+        GameRegistry.registerItem(silverAxeBlade = new BaseItem(Names.materials.SILVER + "_axe_blade").setCreativeTab(ShinseiTabs.TOOLS_TAB), Names.materials.SILVER + "_axe_blade");
+        GameRegistry.registerItem(silverHoeBlade = new BaseItem(Names.materials.SILVER + "_hoe_blade").setCreativeTab(ShinseiTabs.TOOLS_TAB), Names.materials.SILVER + "_hoe_blade");
+        GameRegistry.registerItem(silverPickaxeBlade = new BaseItem(Names.materials.SILVER + "_pickaxe_blade").setCreativeTab(ShinseiTabs.TOOLS_TAB), Names.materials.SILVER + "_pickaxe_blade");
+        GameRegistry.registerItem(silverShovelBlade = new BaseItem(Names.materials.SILVER + "_shovel_blade").setCreativeTab(ShinseiTabs.TOOLS_TAB), Names.materials.SILVER + "_shovel_blade");
+        GameRegistry.registerItem(silverSwordBlade = new BaseItem(Names.materials.SILVER + "_sword_blade").setCreativeTab(ShinseiTabs.TOOLS_TAB), Names.materials.SILVER + "_sword_blade");
 
         GameRegistry.registerItem(woodToolHandle = new BaseItem("tool_handle_wood"), "tool_handle_wood");
 
-        GameRegistry.registerItem(ironHammer = new ShinseiPickaxe(Names.metals.IRON + "_hammer", Item.ToolMaterial.STONE), Names.metals.IRON + "_hammer");
+        GameRegistry.registerItem(ironHammer = new ShinseiPickaxe(Names.materials.IRON + "_hammer", Item.ToolMaterial.STONE), Names.materials.IRON + "_hammer");
 
     }
 }

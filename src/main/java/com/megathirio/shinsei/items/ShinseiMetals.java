@@ -13,10 +13,10 @@ public class ShinseiMetals {
     public static Item silverIngot;
 
     public static void createItems(){
-        GameRegistry.registerItem(aluminumDust = new BaseItem(Names.metals.ALUMINUM + "_dust"), Names.metals.ALUMINUM + "_dust");
-        GameRegistry.registerItem(aluminumIngot = new BaseItem(Names.metals.ALUMINUM + "_ingot"), Names.metals.ALUMINUM + "_ingot");
-        GameRegistry.registerItem(silverDust = new BaseItem(Names.metals.SILVER + "_dust"), Names.metals.SILVER + "_dust");
-        GameRegistry.registerItem(silverNugget = new BaseItem(Names.metals.SILVER + "_nugget"), Names.metals.SILVER + "_nugget");
-        GameRegistry.registerItem(silverIngot = new BaseItem(Names.metals.SILVER + "_ingot"), Names.metals.SILVER + "_ingot");
+        GameRegistry.registerItem(aluminumDust = new BaseItem(Names.materials.ALUMINUM + "_dust"), Names.materials.ALUMINUM + "_dust");
+        GameRegistry.registerItem(aluminumIngot = new BaseItem(Names.materials.ALUMINUM + "_ingot"), Names.materials.ALUMINUM + "_ingot");
+        GameRegistry.registerItem(silverDust = new BaseItem(Names.materials.SILVER + "_dust"), Names.materials.SILVER + "_dust");
+        GameRegistry.registerItem(silverNugget = new BaseItem(Names.materials.SILVER + "_nugget"), Names.materials.SILVER + "_nugget");
+        GameRegistry.registerItem(silverIngot = new BaseItem(Names.materials.SILVER + "_ingot"), Names.materials.SILVER + "_ingot");
     }
 }

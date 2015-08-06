@@ -9,12 +9,14 @@ itemGroup.shinsei:items_tab=Shinsei Items
 
 #Ores
 tile.acanthite_ore.name=Acanthite
+tile.amethyst_ore.name=Amethyst
 tile.bauxite_ore.name=Bauxite
 tile.halite_ore.name=Halite
 tile.meteorite.name=Meteorite
 
 #Blocks
 tile.aluminum_block.name=Aluminum Block
+tile.amethyst_block.name=Amethyst Block
 tile.silver_block.name=Silver Block
 
 tile.brick.gray.name=Gray Bricks

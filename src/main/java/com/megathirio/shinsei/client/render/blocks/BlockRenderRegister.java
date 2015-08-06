@@ -10,12 +10,17 @@ import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 
 public final class BlockRenderRegister {
 
-    public static HashMap<Block[], Item[]> blockMap = new HashMaps().getBasicOreMap();
-    public static Set<Block[]> blockSet = blockMap.keySet();
+    public static HashMap<Block[], Item[]> basicBlockMap = new HashMaps().getBasicOreMap();
+    public static Set<Map.Entry<Block[], Item[]>> basicBlockSet = basicBlockMap.entrySet();
+    public static HashMap<Block[], Item[]> advBlockMap = new HashMaps().getAdvOreMap();
+    public static Set<Map.Entry<Block[], Item[]>> advBlockSet = advBlockMap.entrySet();
+    public static HashMap<Block[], Item[]> gemsMap = new HashMaps().getGemsMap();
+    public static Set<Map.Entry<Block[], Item[]>> gemsSet = gemsMap.entrySet();
 
     public static void preInit() {
         MetaBlockRenderRegister.preInit();
@@ -24,18 +29,36 @@ public final class BlockRenderRegister {
     public static void registerBlockRenderer(){
         MetaBlockRenderRegister.registerBlockRenderer();
 
-        for (Block[] set : blockSet) {
-            Block ore = set[0];
-            Block block = set[1];
+        for (Map.Entry<Block[], Item[]> mapEntry : basicBlockSet) {
+            Block ore = mapEntry.getKey()[0];
+            Block block = mapEntry.getKey()[1];
 
             reg(ore);
             reg(block);
         }
 
+        for (Map.Entry<Block[], Item[]> mapEntry : advBlockSet) {
+            Block ore = mapEntry.getKey()[0];
+            Block block = mapEntry.getKey()[1];
+
+            reg(ore);
+            reg(block);
+        }
+
+        for (Map.Entry<Block[], Item[]> mapEntry : gemsSet) {
+            Block block = mapEntry.getKey()[0];
+            Block ore = mapEntry.getKey()[1];
+
+            reg(block);
+            reg(ore);
+        }
+
         reg(ShinseiOres.haliteOre);
         reg(ShinseiOres.meteorite);
         reg(ShinseiBlocks.antimonyBlock);
+/*
         reg(ShinseiBlocks.amethystBlock);
+*/
         reg(ShinseiBlocks.apatiteBlock);
         reg(ShinseiBlocks.aquamarineBlock);
         reg(ShinseiBlocks.bariumBlock);

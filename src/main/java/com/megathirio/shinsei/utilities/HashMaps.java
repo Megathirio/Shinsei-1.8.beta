@@ -17,6 +17,7 @@ public class HashMaps {
 
     public static HashMap<Block[], Item[]> basicOreMap = new HashMap<Block[], Item[]>();
     public static HashMap<Block[], Item[]> advOreMap = new HashMap<Block[], Item[]>();
+    public static HashMap<Block[], Item[]> gemsMap = new HashMap<Block[], Item[]>();
     public static HashMap<Item, Item[]> toolMap = new HashMap<Item, Item[]>();
     public static HashMap<Item, Item> bookMap = new HashMap<Item, Item>();
 
@@ -52,6 +53,9 @@ public class HashMaps {
         //Advanced Ores
         advOreMap.put(new Block[]{ShinseiOres.bauxiteOre, ShinseiBlocks.aluminumBlock}, new Item[]{ShinseiItems.aluminumDust, ShinseiItems.aluminumNugget, ShinseiItems.aluminumIngot});
 
+        //Basic Gems
+        gemsMap.put(new Block[]{ShinseiBlocks.amethystBlock, ShinseiOres.amethystOre}, new Item[]{ShinseiItems.amethystGem, ShinseiItems.amethystDust, ShinseiItems.amethystDustCharged, ShinseiItems.amethystDustInfused});
+
         //Tool Heads
         toolMap.put(ShinseiTools.silverAxe, new Item[]{ShinseiTools.silverAxeBlade, ShinseiTools.woodToolHandle, ShinseiTools.bookAxe, ShinseiTools.ironHammer, ShinseiItems.silverIngot});
         toolMap.put(ShinseiTools.silverHoe, new Item[]{ShinseiTools.silverHoeBlade, ShinseiTools.woodToolHandle, ShinseiTools.bookHoe, ShinseiTools.ironHammer, ShinseiItems.silverIngot});
@@ -78,6 +82,10 @@ public class HashMaps {
 
     public static HashMap<Block[], Item[]> getAdvOreMap() {
         return advOreMap;
+    }
+
+    public static HashMap<Block[], Item[]> getGemsMap() {
+        return gemsMap;
     }
 
     public static HashMap<String, Integer> getBrickMap() {

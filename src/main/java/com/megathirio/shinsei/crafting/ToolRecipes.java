@@ -1,8 +1,10 @@
 package com.megathirio.shinsei.crafting;
 
+import com.megathirio.shinsei.blocks.BaseBlock;
 import com.megathirio.shinsei.items.ShinseiItems;
 import com.megathirio.shinsei.items.ShinseiTools;
 import com.megathirio.shinsei.utilities.HashMaps;
+import net.minecraft.block.Block;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -10,13 +12,14 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 
 public class ToolRecipes {
     public static HashMap<Item, Item[]> toolMap = new HashMaps().getToolMap();
     public static Set<Item> toolSet = toolMap.keySet();
     public static HashMap<Item, Item> bookMap = new HashMaps().getBookMap();
-    public static Set<Item> bookSet = bookMap.keySet();
+    public static Set<Map.Entry<Item, Item>> bookSet = bookMap.entrySet();
 
     public static void initRecipes(){
         for (Item tool : toolSet) {
@@ -30,12 +33,13 @@ public class ToolRecipes {
             GameRegistry.addShapelessRecipe(new ItemStack(tool, 1), head, handle, book);
         }
 
-        for (Item book : bookSet) {
-            Item keyItem = bookMap.get(book);
-
-            GameRegistry.addShapelessRecipe(new ItemStack(book, 1), Items.book, keyItem, new ItemStack(ShinseiTools.boneAxe, 1, OreDictionary.WILDCARD_VALUE));
-            GameRegistry.addShapelessRecipe(new ItemStack(book, 1), Items.book, keyItem, new ItemStack(ShinseiTools.flintAxe, 1, OreDictionary.WILDCARD_VALUE));
+        for (Map.Entry<Item, Item> mapEntry : bookSet) {
+            Item book = mapEntry.getKey();
+            Item item = mapEntry.getValue();
+            GameRegistry.addShapelessRecipe(new ItemStack(book, 1), Items.book, item, new ItemStack(ShinseiTools.boneAxe, 1, OreDictionary.WILDCARD_VALUE));
+            GameRegistry.addShapelessRecipe(new ItemStack(book, 1), Items.book, item, new ItemStack(ShinseiTools.flintAxe, 1, OreDictionary.WILDCARD_VALUE));
         }
+
         GameRegistry.addShapelessRecipe(new ItemStack(ShinseiTools.flintAxe, 1), Items.flint, Items.stick);
         GameRegistry.addShapelessRecipe(new ItemStack(ShinseiTools.boneAxe, 1), Items.bone,  Items.stick);
         GameRegistry.addShapelessRecipe(new ItemStack(ShinseiTools.ironHammer, 1), Items.iron_ingot, ShinseiTools.woodToolHandle, ShinseiItems.bookShinsei);

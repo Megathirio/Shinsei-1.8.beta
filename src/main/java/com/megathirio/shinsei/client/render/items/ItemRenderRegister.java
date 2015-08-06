@@ -16,6 +16,10 @@ public class ItemRenderRegister {
         reg(ShinseiItems.aluminumDust);
         reg(ShinseiItems.aluminumNugget);
         reg(ShinseiItems.aluminumIngot);
+        reg(ShinseiItems.amethystDust);
+        reg(ShinseiItems.amethystDustCharged);
+        reg(ShinseiItems.amethystDustInfused);
+        reg(ShinseiItems.amethystGem);
         reg(ShinseiItems.silverDust);
         reg(ShinseiItems.silverNugget);
         reg(ShinseiItems.silverIngot);

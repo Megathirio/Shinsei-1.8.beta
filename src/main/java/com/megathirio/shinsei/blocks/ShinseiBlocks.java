@@ -1,12 +1,12 @@
 package com.megathirio.shinsei.blocks;
 
-import com.megathirio.shinsei.items.ShinseiItems;
+import com.megathirio.shinsei.utilities.Names;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 
 public class ShinseiBlocks {
@@ -67,21 +67,10 @@ public class ShinseiBlocks {
     public static Block gypsumBlock;
     public static Block haliteBlock;
 
-    public static HashMap<Block, String> testMap = new HashMap<Block, String>();
-    public static Set<Block> testSet = testMap.keySet();
-
     public static void createBlocks(){
-        testMap.put(aluminumBlock, "aluminum_block");
-        testMap.put(antimonyBlock, "antinmony_block");
 
-        for (Block test : testSet) {
-            String name = testMap.get(test);
-            GameRegistry.registerBlock(test = new BaseBlock(name), name);
-        }
-/*
         GameRegistry.registerBlock(aluminumBlock = new BaseBlock("aluminum_block"), "aluminum_block");
         GameRegistry.registerBlock(antimonyBlock = new BaseBlock("antimony_block"), "antimony_block");
-*/
         GameRegistry.registerBlock(bariumBlock = new BaseBlock("barium_block"), "barium_block");
         GameRegistry.registerBlock(bismuthBlock = new BaseBlock("bismuth_block"), "bismuth_block");
         GameRegistry.registerBlock(brassBlock = new BaseBlock("brass_block"), "brass_block");
@@ -104,7 +93,7 @@ public class ShinseiBlocks {
         GameRegistry.registerBlock(tungstenBlock = new BaseBlock("tungsten_block"), "tungsten_block");
         GameRegistry.registerBlock(vanadiumBlock = new BaseBlock("vanadium_block"), "vanadium_block");
         GameRegistry.registerBlock(zincBlock = new BaseBlock("zinc_block"), "zinc_block");
-        GameRegistry.registerBlock(amethystBlock = new BaseBlock("amethyst_block"), "amethyst_block");
+        GameRegistry.registerBlock(amethystBlock = new BaseBlock(Names.materials.AMETHYST + "_block"), Names.materials.AMETHYST + "_block");
         GameRegistry.registerBlock(apatiteBlock = new BaseBlock("apatite_block"), "apatite_block");
         GameRegistry.registerBlock(aquamarineBlock = new BaseBlock("aquamarine_block"), "aquamarine_block");
         GameRegistry.registerBlock(fluoriteBlock = new BaseBlock("fluorite_block"), "fluorite_block");

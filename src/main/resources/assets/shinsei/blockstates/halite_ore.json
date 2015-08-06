@@ -1,5 +1,7 @@
 {
-  "variants":{
-    "normal":{ "model": "shinsei:halite_ore"}
-  }
+    "variants": {
+        "normal": {
+            "model": "shinsei:halite_ore"
+        }
+    }
 }
