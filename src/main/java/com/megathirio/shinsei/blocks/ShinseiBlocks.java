@@ -11,7 +11,6 @@ import java.util.Set;
 
 public class ShinseiBlocks {
 
-    public static Block aluminumBlock;
     public static Block silverBlock;
     public static Block siding;
     public static Block bricks;
@@ -19,7 +18,8 @@ public class ShinseiBlocks {
     public static Block woodCrateCache;
 
     //Metals
-    public static Block antimonyBlock;
+    public static BaseBlock aluminumBlock;
+    public static BaseBlock antimonyBlock;
     public static Block bariumBlock;
     public static Block bismuthBlock;
     public static Block brassBlock;
@@ -67,10 +67,25 @@ public class ShinseiBlocks {
     public static Block gypsumBlock;
     public static Block haliteBlock;
 
+    public static HashMap<Block, String> testMap = new HashMap<Block, String>();
+
     public static void createBlocks(){
 
-        GameRegistry.registerBlock(aluminumBlock = new BaseBlock("aluminum_block"), "aluminum_block");
-        GameRegistry.registerBlock(antimonyBlock = new BaseBlock("antimony_block"), "antimony_block");
+        testMap.put(ShinseiBlocks.aluminumBlock, "aluminum_block");
+        testMap.put(ShinseiBlocks.antimonyBlock, "antimony_block");
+
+        Set<Map.Entry<Block, String>> testSet = testMap.entrySet();
+
+        for (Map.Entry<Block, String> mapEntry : testSet) {
+            Block block = mapEntry.getKey();
+            String name = mapEntry.getValue();
+
+            GameRegistry.registerBlock(block, name);
+        }
+/*
+        GameRegistry.registerBlock(aluminumBlock, "aluminum_block");
+        GameRegistry.registerBlock(antimonyBlock, "antimony_block");
+*/
         GameRegistry.registerBlock(bariumBlock = new BaseBlock("barium_block"), "barium_block");
         GameRegistry.registerBlock(bismuthBlock = new BaseBlock("bismuth_block"), "bismuth_block");
         GameRegistry.registerBlock(brassBlock = new BaseBlock("brass_block"), "brass_block");
