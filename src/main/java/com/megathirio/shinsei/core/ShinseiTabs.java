@@ -13,7 +13,7 @@ public class ShinseiTabs {
     public static final CreativeTabs ORES_TAB = new CreativeTabs(Reference.RESOURCE_PREFIX + "ore_tab") {
         @Override
         public Item getTabIconItem() {
-            return Item.getItemFromBlock(ShinseiOres.acanthiteOre);
+            return Item.getItemFromBlock(ShinseiOres.getBlock("acanthite_ore"));
         }
     };
 
@@ -41,7 +41,7 @@ public class ShinseiTabs {
     public static final CreativeTabs ITEMS_TAB = new CreativeTabs(Reference.RESOURCE_PREFIX + "items_tab") {
         @Override
         public Item getTabIconItem() {
-            return ShinseiItems.aluminumDust;
+            return ShinseiItems.getItem("aluminum_dust");
         }
     };
 }

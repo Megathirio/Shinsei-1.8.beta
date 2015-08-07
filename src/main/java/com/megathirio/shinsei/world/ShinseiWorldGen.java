@@ -21,11 +21,11 @@ public class ShinseiWorldGen implements IWorldGenerator{
     private WorldGenerator gen_marble_ovr; //Generates Marble in Overworld
 
     public ShinseiWorldGen(){
-        this.gen_halite_ovr = new WorldGenMinable(ShinseiOres.haliteOre.getDefaultState(), 10);
-        this.gen_halite_net = new WorldGenMinable(ShinseiOres.haliteOre.getDefaultState(), 6, BlockHelper.forBlock(Blocks.netherrack));
+        this.gen_halite_ovr = new WorldGenMinable(ShinseiOres.getBlock("halite_ore").getDefaultState(), 10);
+        this.gen_halite_net = new WorldGenMinable(ShinseiOres.getBlock("halite_ore").getDefaultState(), 6, BlockHelper.forBlock(Blocks.netherrack));
         this.gen_granite_ovr = new WorldGenMinable(ShinseiOres.granite.getDefaultState(), 18);
         this.gen_marble_ovr = new WorldGenMinable(ShinseiOres.marble.getDefaultState(), 18);
-        this.gen_meteorite_ovr = new WorldGenMinable(ShinseiOres.meteorite.getDefaultState(), 6, BlockHelper.forBlock(Blocks.grass));
+        this.gen_meteorite_ovr = new WorldGenMinable(ShinseiOres.getBlock("meteorite").getDefaultState(), 6, BlockHelper.forBlock(Blocks.grass));
     }
 
     @Override

@@ -1,9 +1,9 @@
 package com.megathirio.shinsei.client.render.blocks;
 
-import com.megathirio.shinsei.blocks.ShinseiBlocks;
 import com.megathirio.shinsei.blocks.ShinseiOres;
-import com.megathirio.shinsei.utilities.HashMaps;
+import com.megathirio.shinsei.utilities.hashmaps.HashMaps;
 import com.megathirio.shinsei.utilities.Reference;
+import com.megathirio.shinsei.utilities.hashmaps.Metals;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
@@ -15,12 +15,10 @@ import java.util.Set;
 
 public final class BlockRenderRegister {
 
-    public static HashMap<Block[], Item[]> basicBlockMap = new HashMaps().getBasicOreMap();
-    public static Set<Map.Entry<Block[], Item[]>> basicBlockSet = basicBlockMap.entrySet();
-    public static HashMap<Block[], Item[]> advBlockMap = new HashMaps().getAdvOreMap();
-    public static Set<Map.Entry<Block[], Item[]>> advBlockSet = advBlockMap.entrySet();
-    public static HashMap<Block[], Item[]> gemsMap = new HashMaps().getGemsMap();
-    public static Set<Map.Entry<Block[], Item[]>> gemsSet = gemsMap.entrySet();
+    public static HashMap<Block[], Item[]> basicOreMap = new Metals().getBasicOreMap();
+    public static Set<Map.Entry<Block[], Item[]>> basicOreSet = basicOreMap.entrySet();
+    public static HashMap<Block[], Item[]> advOreMap = new Metals().getAdvOreMap();
+    public static Set<Map.Entry<Block[], Item[]>> advOreSet = advOreMap.entrySet();
 
     public static void preInit() {
         MetaBlockRenderRegister.preInit();
@@ -28,8 +26,7 @@ public final class BlockRenderRegister {
 
     public static void registerBlockRenderer(){
         MetaBlockRenderRegister.registerBlockRenderer();
-
-        for (Map.Entry<Block[], Item[]> mapEntry : basicBlockSet) {
+        for (Map.Entry<Block[], Item[]> mapEntry : basicOreSet) {
             Block ore = mapEntry.getKey()[0];
             Block block = mapEntry.getKey()[1];
 
@@ -37,7 +34,7 @@ public final class BlockRenderRegister {
             reg(block);
         }
 
-        for (Map.Entry<Block[], Item[]> mapEntry : advBlockSet) {
+        for (Map.Entry<Block[], Item[]> mapEntry : advOreSet) {
             Block ore = mapEntry.getKey()[0];
             Block block = mapEntry.getKey()[1];
 
@@ -45,62 +42,9 @@ public final class BlockRenderRegister {
             reg(block);
         }
 
-        for (Map.Entry<Block[], Item[]> mapEntry : gemsSet) {
-            Block block = mapEntry.getKey()[0];
-            Block ore = mapEntry.getKey()[1];
+        reg(ShinseiOres.getBlock("halite_ore"));
+        reg(ShinseiOres.getBlock("meteorite"));
 
-            reg(block);
-            reg(ore);
-        }
-
-        reg(ShinseiOres.haliteOre);
-        reg(ShinseiOres.meteorite);
-        reg(ShinseiBlocks.antimonyBlock);
-/*
-        reg(ShinseiBlocks.amethystBlock);
-*/
-        reg(ShinseiBlocks.apatiteBlock);
-        reg(ShinseiBlocks.aquamarineBlock);
-        reg(ShinseiBlocks.bariumBlock);
-        reg(ShinseiBlocks.basaltBlock);
-        reg(ShinseiBlocks.bismuthBlock);
-        reg(ShinseiBlocks.boraxBlock);
-        reg(ShinseiBlocks.brassBlock);
-        reg(ShinseiBlocks.bronzeBlock);
-        reg(ShinseiBlocks.basaltCobble);
-        reg(ShinseiBlocks.chalkBlock);
-        reg(ShinseiBlocks.chromiumBlock);
-        reg(ShinseiBlocks.cobaltBlock);
-        reg(ShinseiBlocks.copperBlock);
-        reg(ShinseiBlocks.woodCrateCache);
-        reg(ShinseiBlocks.fluoriteBlock);
-        reg(ShinseiBlocks.gypsumBlock);
-        reg(ShinseiBlocks.haliteBlock);
-        reg(ShinseiBlocks.jadeBlock);
-        reg(ShinseiBlocks.leadBlock);
-        reg(ShinseiBlocks.limestoneBlock);
-        reg(ShinseiBlocks.magnesiumBlock);
-        reg(ShinseiBlocks.manganeseBlock);
-        reg(ShinseiBlocks.molybdenumBlock);
-        reg(ShinseiBlocks.nickelBlock);
-        reg(ShinseiBlocks.onyxBlock);
-        reg(ShinseiBlocks.opalBlock);
-        reg(ShinseiBlocks.peridotBlock);
-        reg(ShinseiBlocks.platinumBlock);
-        reg(ShinseiBlocks.rubyBlock);
-        reg(ShinseiBlocks.sapphireBlock);
-        reg(ShinseiBlocks.siltstoneBlock);
-        reg(ShinseiBlocks.steelBlock);
-        reg(ShinseiBlocks.scarletEmeraldBlock);
-        reg(ShinseiBlocks.stainlessSteelBlock);
-        reg(ShinseiBlocks.tantalumBlock);
-        reg(ShinseiBlocks.tinBlock);
-        reg(ShinseiBlocks.titaniumBlock);
-        reg(ShinseiBlocks.topazBlock);
-        reg(ShinseiBlocks.tungstenBlock);
-        reg(ShinseiBlocks.turquoiseBlock);
-        reg(ShinseiBlocks.vanadiumBlock);
-        reg(ShinseiBlocks.zincBlock);
     }
 
     public static String modid = Reference.MOD_ID;

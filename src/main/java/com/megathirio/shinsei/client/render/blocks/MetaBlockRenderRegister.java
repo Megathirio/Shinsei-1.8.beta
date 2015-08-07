@@ -2,7 +2,7 @@ package com.megathirio.shinsei.client.render.blocks;
 
 import com.megathirio.shinsei.blocks.ShinseiBlocks;
 import com.megathirio.shinsei.blocks.ShinseiOres;
-import com.megathirio.shinsei.utilities.HashMaps;
+import com.megathirio.shinsei.utilities.hashmaps.HashMaps;
 import com.megathirio.shinsei.utilities.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
