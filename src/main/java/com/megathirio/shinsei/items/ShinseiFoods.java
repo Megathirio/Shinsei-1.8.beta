@@ -12,7 +12,9 @@ public class ShinseiFoods {
     public static Item curedBeef;
     public static Item curedPork;
 
+/*
     public static Item salt;
+*/
 
     public static void createItems(){
         GameRegistry.registerItem(poisonApple = new BaseFood("apple", 4, 0.3f, false)
@@ -24,6 +26,8 @@ public class ShinseiFoods {
         GameRegistry.registerItem(curedPork = new BaseFood("cured_pork", 2, 0.8f, true)
                 .setAlwaysEdible(), "cured_pork");
 
+/*
         GameRegistry.registerItem(salt = new BaseItem("salt"), "salt");
+*/
     }
 }

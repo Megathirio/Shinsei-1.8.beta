@@ -25,7 +25,7 @@ public class BlockProperties extends Block implements IMetaBlockName{
     public BlockProperties(String unlocalizedName){
         super(Material.rock);
         this.setUnlocalizedName(unlocalizedName);
-        this.setCreativeTab(ShinseiTabs.BLOCKS_TAB);
+        this.setCreativeTab(ShinseiTabs.ALLOYS_TAB);
         this.setHardness(4.0f);
         this.setResistance(6.5f);
         this.setDefaultState(this.blockState.getBaseState().withProperty(TYPE, EnumColors.WHITE));
@@ -34,7 +34,7 @@ public class BlockProperties extends Block implements IMetaBlockName{
     public BlockProperties(String unlocalizedName, Material material, float hardness, float resistance){
         super(material);
         this.setUnlocalizedName(unlocalizedName);
-        this.setCreativeTab(ShinseiTabs.BLOCKS_TAB);
+        this.setCreativeTab(ShinseiTabs.ALLOYS_TAB);
         this.setHardness(hardness);
         this.setResistance(resistance);
         this.setDefaultState(this.blockState.getBaseState().withProperty(TYPE, EnumColors.WHITE));

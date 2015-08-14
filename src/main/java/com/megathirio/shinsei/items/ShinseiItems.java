@@ -13,32 +13,52 @@ public class ShinseiItems {
     public static HashMap<String, Item> itemEntries = new HashMap<String, Item>();
 
     public static void addItem(){
+/*
         itemEntries.put("aluminum_dust", new BaseItem("aluminum_dust"));
         itemEntries.put("aluminum_nugget", new BaseItem("aluminum_nugget"));
         itemEntries.put("aluminum_ingot", new BaseItem("aluminum_ingot"));
+
         itemEntries.put("antimony_dust", new BaseItem("antimony_dust"));
         itemEntries.put("antimony_nugget", new BaseItem("antimony_nugget"));
         itemEntries.put("antimony_ingot", new BaseItem("antimony_ingot"));
+
+        itemEntries.put("barium_dust", new BaseItem("barium_dust"));
+        itemEntries.put("barium_nugget", new BaseItem("barium_nugget"));
+        itemEntries.put("barium_ingot", new BaseItem("barium_ingot"));
+
+        itemEntries.put("bismuth_dust", new BaseItem("barium_dust"));
+        itemEntries.put("bismuth_nugget", new BaseItem("bismuth_nugget"));
+        itemEntries.put("bismuth_ingot", new BaseItem("bismuth_ingot"));
+
+        itemEntries.put("brass_dust", new BaseItem("brass_dust"));
+        itemEntries.put("brass_nugget", new BaseItem("brass_nugget"));
+        itemEntries.put("brass_ingot", new BaseItem("brass_ingot"));
+
+        itemEntries.put("bronze_dust", new BaseItem("bronze_dust"));
+        itemEntries.put("bronze_nugget", new BaseItem("bronze_nugget"));
+        itemEntries.put("bronze_ingot", new BaseItem("bronze_ingot"));
+
+        itemEntries.put("copper_dust", new BaseItem("copper_dust"));
+        itemEntries.put("copper_nugget", new BaseItem("copper_nugget"));
+        itemEntries.put("copper_ingot", new BaseItem("copper_ingot"));
+
         itemEntries.put("silver_dust", new BaseItem("silver_dust"));
         itemEntries.put("silver_nugget", new BaseItem("silver_nugget"));
         itemEntries.put("silver_ingot", new BaseItem("silver_ingot"));
+
+        itemEntries.put("tin_dust", new BaseItem("tin_dust"));
+        itemEntries.put("tin_nugget", new BaseItem("tin_nugget"));
+        itemEntries.put("tin_ingot", new BaseItem("tin_ingot"));
+
+        itemEntries.put("zinc_dust", new BaseItem("zinc_dust"));
+        itemEntries.put("zinc_nugget", new BaseItem("zinc_nugget"));
+        itemEntries.put("zinc_ingot", new BaseItem("zinc_ingot"));
+
+        itemEntries.put("salt", new BaseItem("salt").setCreativeTab(ShinseiTabs.FOOD_TAB));
+*/
     }
 
     public static Item bookShinsei;
-/*
-    public static Item aluminumDust;
-    public static Item aluminumNugget;
-    public static Item aluminumIngot;
-*/
-    public static Item amethystDust;
-    public static Item amethystDustCharged;
-    public static Item amethystDustInfused;
-    public static Item amethystGem;
-/*
-    public static Item silverDust;
-    public static Item silverNugget;
-    public static Item silverIngot;
-*/
 
     public static Item splitWood;
 
@@ -52,20 +72,6 @@ public class ShinseiItems {
         ShinseiTools.createItems();
 
         GameRegistry.registerItem(bookShinsei = new ContainerItem("book_shinsei").setCreativeTab(ShinseiTabs.ITEMS_TAB), "book_shinsei");
-/*
-        GameRegistry.registerItem(aluminumDust = new BaseItem(Names.materials.ALUMINUM + "_dust"), Names.materials.ALUMINUM + "_dust");
-        GameRegistry.registerItem(aluminumNugget = new BaseItem(Names.materials.ALUMINUM + "_nugget"), Names.materials.ALUMINUM + "_nugget");
-        GameRegistry.registerItem(aluminumIngot = new BaseItem(Names.materials.ALUMINUM + "_ingot"), Names.materials.ALUMINUM + "_ingot");
-*/
-        GameRegistry.registerItem(amethystDust = new BaseItem(Names.materials.AMETHYST + "_dust"), Names.materials.AMETHYST + "_dust");
-        GameRegistry.registerItem(amethystDustCharged = new BaseItem(Names.materials.AMETHYST + "_dust_charged"), Names.materials.AMETHYST + "_dust_charged");
-        GameRegistry.registerItem(amethystDustInfused = new BaseItem(Names.materials.AMETHYST + "_dust_infused"), Names.materials.AMETHYST + "_dust_infused");
-        GameRegistry.registerItem(amethystGem = new BaseItem(Names.materials.AMETHYST + "_gem"), Names.materials.AMETHYST + "_gem");
-/*
-        GameRegistry.registerItem(silverDust = new BaseItem(Names.materials.SILVER + "_dust"), Names.materials.SILVER + "_dust");
-        GameRegistry.registerItem(silverNugget = new BaseItem(Names.materials.SILVER + "_nugget"), Names.materials.SILVER + "_nugget");
-        GameRegistry.registerItem(silverIngot = new BaseItem(Names.materials.SILVER + "_ingot"), Names.materials.SILVER + "_ingot");
-*/
 
         GameRegistry.registerItem(splitWood = new BaseItem("split_wood"), "split_wood");
     }
