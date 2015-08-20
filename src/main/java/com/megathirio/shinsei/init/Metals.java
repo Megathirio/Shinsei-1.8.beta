@@ -26,7 +26,9 @@ public class Metals {
 
     //Initialize Blocks and Items
     public static void addMetalBlocks(){
+/*
         metalBlocksMap.put("acanthite_ore", new BaseMetal("acanthite_ore", Material.rock, 2.0f, 3.2f));
+*/
         metalBlocksMap.put("silver_block", new BaseMetal("silver_block", Material.rock, 2.0f, 3.2f));
 
         metalBlocksMap.put("barite_ore", new BaseMetal("barite_ore", Material.rock, 3.5f, 5.7f));
@@ -140,7 +142,9 @@ public class Metals {
         itemOreDict.put(metalItemsMap.get("lead_nugget"), "nuggetLead");
         itemOreDict.put(metalItemsMap.get("lead_ingot"), "ingotLead");
 
+/*
         blockOreDict.put(metalBlocksMap.get("acanthite_ore"), "oreSilver");
+*/
         blockOreDict.put(metalBlocksMap.get("silver_block"), "blockSilver");
         itemOreDict.put(metalItemsMap.get("silver_dust"), "dustSilver");
         itemOreDict.put(metalItemsMap.get("silver_nugget"), "nuggetSilver");
@@ -165,7 +169,9 @@ public class Metals {
         itemOreDict.put(metalItemsMap.get("zinc_ingot"), "ingotZinc");
 
         //Basic Ore Map
+/*
         metalMap.put(new Block[]{metalBlocksMap.get("acanthite_ore"), metalBlocksMap.get("silver_block")}, new Item[]{metalItemsMap.get("silver_dust"), metalItemsMap.get("silver_nugget"), metalItemsMap.get("silver_ingot")});
+*/
         metalMap.put(new Block[]{metalBlocksMap.get("stibnite_ore"), metalBlocksMap.get("antimony_block")}, new Item[]{metalItemsMap.get("antimony_dust"), metalItemsMap.get("antimony_nugget"), metalItemsMap.get("antimony_ingot")});
         metalMap.put(new Block[]{metalBlocksMap.get("bornite_ore"), metalBlocksMap.get("copper_block")}, new Item[]{metalItemsMap.get("copper_dust"), metalItemsMap.get("copper_nugget"), metalItemsMap.get("copper_ingot")});
         metalMap.put(new Block[]{metalBlocksMap.get("chalcopyrite_ore"), metalBlocksMap.get("copper_block")}, new Item[]{metalItemsMap.get("copper_dust"), metalItemsMap.get("copper_nugget"), metalItemsMap.get("copper_ingot")});

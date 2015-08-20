@@ -1,7 +1,7 @@
 package com.megathirio.shinsei.core;
 
 import com.megathirio.shinsei.blocks.ShinseiAlloys;
-import com.megathirio.shinsei.init.Gems;
+import com.megathirio.shinsei.blocks.Gems;
 import com.megathirio.shinsei.init.Minerals;
 
 public class ShinseiOreDict {

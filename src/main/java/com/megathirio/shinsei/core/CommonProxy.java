@@ -4,7 +4,7 @@ import com.megathirio.shinsei.blocks.*;
 import com.megathirio.shinsei.crafting.ShinseiCrafting;
 import com.megathirio.shinsei.init.Metals;
 import com.megathirio.shinsei.init.Minerals;
-import com.megathirio.shinsei.init.Gems;
+import com.megathirio.shinsei.blocks.Gems;
 import com.megathirio.shinsei.items.ShinseiItems;
 import com.megathirio.shinsei.world.ShinseiWorldGen;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -22,6 +22,8 @@ public class CommonProxy {
         ShinseiBlocks.createBlocks();
         ShinseiMetaBlocks.createMetaBlocks();
         ShinseiAlloys.createAlloys();
+
+        Ores.addOre();
     }
 
     public void init(FMLInitializationEvent e){

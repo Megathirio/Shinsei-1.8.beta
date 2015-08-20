@@ -1,21 +1,16 @@
 package com.megathirio.shinsei.crafting;
 
-import com.megathirio.shinsei.init.Gems;
-import com.megathirio.shinsei.init.Metals;
+import com.megathirio.shinsei.utilities.hashmaps.HashMaps;
 import net.minecraft.block.Block;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class GemRecipes {
-    public static HashMap<Block[], Item[]> gemMap = new Gems().getGemMap();
+    public static HashMap<Block[], Item[]> gemMap = new HashMaps().getGemMap();
 
     public static void initRecipes(){
+/*
         for (Map.Entry<Block[], Item[]> gemEntry : gemMap.entrySet()) {
             Block ore = gemEntry.getKey()[0];
             Block block = gemEntry.getKey()[1];
@@ -34,5 +29,6 @@ public class GemRecipes {
             GameRegistry.addShapelessRecipe(new ItemStack(dust_infused, 1), dust, Items.glowstone_dust);
             GameRegistry.addSmelting(dust, new ItemStack(gem), 0.7F);
         }
+*/
     }
 }

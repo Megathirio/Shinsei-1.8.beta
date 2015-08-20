@@ -8,4 +8,8 @@ public class Names {
         public static final String SILVER = "silver";
         public static final String COPPER = "copper";
     }
+
+    public static final class ores {
+        public static final String ACANTHITE = "acanthite";
+    }
 }

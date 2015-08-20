@@ -1,6 +1,6 @@
 package com.megathirio.shinsei.core;
 
-import com.megathirio.shinsei.init.Gems;
+import com.megathirio.shinsei.blocks.Gems;
 import com.megathirio.shinsei.init.Metals;
 import com.megathirio.shinsei.init.Minerals;
 import com.megathirio.shinsei.utilities.Reference;

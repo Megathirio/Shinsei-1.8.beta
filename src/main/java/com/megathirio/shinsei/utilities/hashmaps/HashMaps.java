@@ -1,7 +1,9 @@
 package com.megathirio.shinsei.utilities.hashmaps;
 
+import com.megathirio.shinsei.blocks.Gems;
 import com.megathirio.shinsei.items.ShinseiItems;
 import com.megathirio.shinsei.items.ShinseiTools;
+import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -14,6 +16,8 @@ public class HashMaps {
 
     public static HashMap<Item, Item[]> toolMap = new HashMap<Item, Item[]>();
     public static HashMap<Item, Item> bookMap = new HashMap<Item, Item>();
+
+    public static HashMap<Block[], Item[]> gemMap = new HashMap<Block[], Item[]>();
 
     public HashMaps(){
         //Colors
@@ -54,6 +58,16 @@ public class HashMaps {
         bookMap.put(ShinseiTools.bookPickaxe, Item.getItemFromBlock(Blocks.cobblestone));
         bookMap.put(ShinseiTools.bookShovel, Item.getItemFromBlock(Blocks.dirt));
         bookMap.put(ShinseiTools.bookSword, Items.rotten_flesh);
+
+        gemMap.put(new Block[]{Gems.getBlock("amethyst_ore"), Gems.getBlock("amethyst_block"),
+                        Gems.getBlock("amethyst_lamp"), Gems.getBlock("amethyst_stone")},
+                new Item[]{Gems.getItem("amethyst_dust"), Gems.getItem("amethyst_dust_charged"),
+                        Gems.getItem("amethyst_dust_infused"), Gems.getItem("amethyst_gem")});
+
+        gemMap.put(new Block[]{Gems.getBlock("apatite_ore"), Gems.getBlock("apatite_block"),
+                        Gems.getBlock("apatite_lamp"), Gems.getBlock("apatite_stone")},
+                new Item[]{Gems.getItem("apatite_dust"), Gems.getItem("apatite_dust_charged"),
+                        Gems.getItem("apatite_dust_infused"), Gems.getItem("apatite_gem")});
     }
 
     public static HashMap<String, Integer> getColorMap() {
@@ -70,5 +84,9 @@ public class HashMaps {
 
     public static HashMap<Item, Item> getBookMap() {
         return bookMap;
+    }
+
+    public static HashMap<Block[], Item[]> getGemMap() {
+        return gemMap;
     }
 }

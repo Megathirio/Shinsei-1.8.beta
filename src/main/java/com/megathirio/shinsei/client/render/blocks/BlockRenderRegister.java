@@ -1,7 +1,7 @@
 package com.megathirio.shinsei.client.render.blocks;
 
 import com.megathirio.shinsei.blocks.ShinseiAlloys;
-import com.megathirio.shinsei.init.Gems;
+import com.megathirio.shinsei.blocks.Gems;
 import com.megathirio.shinsei.init.Metals;
 import com.megathirio.shinsei.utilities.Reference;
 import com.megathirio.shinsei.init.Minerals;

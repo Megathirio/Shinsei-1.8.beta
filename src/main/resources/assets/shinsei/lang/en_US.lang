@@ -91,6 +91,12 @@ item.silver_nugget.name=Silver Nugget
 item.aluminum_ingot.name=Aluminum Ingot
 item.silver_ingot.name=Silver Ingot
 
+#Gems
+item.amethyst_gem.name=Amethyst
+item.amethyst_dust.name=Amethyst Dust
+item.amethyst_dust_charged.name=Charged Amethyst Dust
+item.amethyst_dust_infused.name=Infused Amethyst Dust
+
 #Food
 item.cured_beef.name=Cured Beef
 item.cured_pork.name=Cured Pork
