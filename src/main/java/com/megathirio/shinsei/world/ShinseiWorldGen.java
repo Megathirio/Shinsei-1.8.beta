@@ -1,45 +1,38 @@
 package com.megathirio.shinsei.world;
 
-import com.megathirio.shinsei.blocks.ShinseiMetaBlocks;
-import com.megathirio.shinsei.init.Minerals;
-import net.minecraft.block.state.pattern.BlockHelper;
-import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
-import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 public class ShinseiWorldGen implements IWorldGenerator{
 
-    private WorldGenerator gen_halite_ovr; //Generates Halite Ore in Overworld
-    private WorldGenerator gen_halite_net; //Generates Halite Ore in Nether
-//    private WorldGenerator gen_meteorite_ovr; //Generates Meteorites in Overworld
-    private WorldGenerator gen_granite_ovr; //Generates Granite in Overworld
-    private WorldGenerator gen_marble_ovr; //Generates Marble in Overworld
+    public static HashMap<WorldGenerator, Integer[]> worldGenMap = new WorldGenMap().getWorldGenMap();
 
     public ShinseiWorldGen(){
-        this.gen_halite_ovr = new WorldGenMinable(Minerals.getBlock("halite_ore").getDefaultState(), 10);
-        this.gen_halite_net = new WorldGenMinable(Minerals.getBlock("halite_ore").getDefaultState(), 6, BlockHelper.forBlock(Blocks.netherrack));
-        this.gen_granite_ovr = new WorldGenMinable(ShinseiMetaBlocks.granite.getDefaultState(), 18);
-        this.gen_marble_ovr = new WorldGenMinable(ShinseiMetaBlocks.marble.getDefaultState(), 18);
-//        this.gen_meteorite_ovr = new WorldGenMinable(Minerals.getBlock("meteorite").getDefaultState(), 6, BlockHelper.forBlock(Blocks.grass));
+    WorldGenMap.addWorldGen();
     }
 
     @Override
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider){
         switch (world.provider.getDimensionId()){
             case 0: //Overworld
-                this.runGenerator(this.gen_halite_ovr, world, random, chunkX, chunkZ, 15, 25, 75);
-                this.runGenerator(this.gen_granite_ovr, world, random, chunkX, chunkZ, 25, 0, 256);
-                this.runGenerator(this.gen_marble_ovr, world, random, chunkX, chunkZ, 25, 0, 256);
-//                this.runGenerator(this.gen_meteorite_ovr, world, random, chunkX, chunkZ, 15, 0, 256);
+                for (Map.Entry<WorldGenerator, Integer[]> mapEntry : worldGenMap.entrySet()){
+                    WorldGenerator worldGen = mapEntry.getKey();
+                    int chance = mapEntry.getValue()[0];
+                    int min = mapEntry.getValue()[1];
+                    int max = mapEntry.getValue()[2];
+
+                    this.runGenerator(worldGen, world, random, chunkX, chunkZ, chance, min, max);
+                }
                 break;
             case -1: //Nether
-                this.runGenerator(this.gen_halite_net, world, random, chunkX, chunkZ, 15, 0, 256);
+//                this.runGenerator(this.gen_acanthite_net, world, random, chunkX, chunkZ, 15, 0, 256);
                 break;
             case 1: //End
 

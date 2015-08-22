@@ -1,5 +1,6 @@
 package com.megathirio.shinsei.world;
 
+import java.util.HashMap;
 import java.util.Random;
 
 import com.google.common.base.Predicate;
@@ -15,7 +16,7 @@ public class ShinseiWorldGenMinable extends WorldGenerator{
     private IBlockState block;
     private Predicate<IBlockState> target;
 
-    public ShinseiWorldGenMinable(IBlockState block, Predicate<IBlockState> target) {
+     public ShinseiWorldGenMinable(IBlockState block, Predicate<IBlockState> target) {
         this.block = block;
         this.target = target;
     }

@@ -1,6 +1,7 @@
 package com.megathirio.shinsei.core;
 
 import com.megathirio.shinsei.client.render.blocks.BlockRenderRegister;
+//import com.megathirio.shinsei.client.render.items.ItemRenderRegister;
 import com.megathirio.shinsei.client.render.items.ItemRenderRegister;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -11,14 +12,11 @@ public class ClientProxy extends CommonProxy{
     @Override
     public void preInit(FMLPreInitializationEvent e){
         super.preInit(e);
-
-        BlockRenderRegister.preInit();
     }
 
     @Override
     public void init(FMLInitializationEvent e){
         super.init(e);
-
         ItemRenderRegister.registerItemRenderer();
         BlockRenderRegister.registerBlockRenderer();
     }

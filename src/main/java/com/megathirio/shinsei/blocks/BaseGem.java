@@ -4,37 +4,41 @@ import com.megathirio.shinsei.core.ShinseiTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.renderer.block.model.ModelBlock;
 import net.minecraft.item.Item;
 
 import java.util.Random;
 
-public class BaseGem extends Block {
+public class BaseGem extends Block{
 
     private Item drop;
     private int meta;
-    private int least_quantity;
-    private int most_quantity;
+    private int min_qty;
+    private int max_qty;
 
-    protected BaseGem(String unlocalizedName, Material material, Item drop, int meta, int least_quantity, int most_quantity){
-        super(material);
+    protected BaseGem(String name, Material mat, float hard, float resist, Item drop, int meta, int min_qty, int max_qty, float lightLevel){
+        super(mat);
         this.drop = drop;
         this.meta = meta;
-        this.least_quantity = least_quantity;
-        this.most_quantity = most_quantity;
+        this.min_qty = min_qty;
+        this.max_qty = max_qty;
         this.setHarvestLevel("pickaxe", 1);
-        this.setHardness(10.0f);
-        this.setResistance(15.0f);
-        this.setUnlocalizedName(unlocalizedName);
+        this.setHardness(hard);
+        this.setResistance(resist);
+        this.setLightLevel(lightLevel);
+        this.setUnlocalizedName(name);
         this.setCreativeTab(ShinseiTabs.GEMS_TAB);
     }
 
-    protected BaseGem(String unlocalizedName, Material material, Item drop, int least_quantity, int most_quantity){
-        this(unlocalizedName, material, drop, 0, least_quantity, most_quantity);
+    protected BaseGem(String name, Material mat, Item drop, float hard, float resist, int min_qty, int max_qty){
+        this(name, mat, hard, resist, drop, 0, min_qty, max_qty, .5f);
     }
 
-    protected BaseGem(String unlocalizedName, Material material, Item drop){
-        this(unlocalizedName, material, drop, 1, 1);
+    protected BaseGem(String name, Material mat, Item drop, int min_qty, int max_qty){
+        this(name, mat, 7.0f, 11.3f, drop, 0, min_qty, max_qty, 0.5f);
+    }
+
+    protected BaseGem(String name, Material mat, Item drop){
+        this(name, mat, 7.0f, 11.3f, drop, 0, 1, 1, .5f);
     }
 
     @Override
@@ -49,9 +53,8 @@ public class BaseGem extends Block {
 
     @Override
     public int quantityDropped(IBlockState blockstate, int fortune, Random random) {
-        if (this.least_quantity >= this.most_quantity)
-            return this.least_quantity;
-        return this.least_quantity + random.nextInt(this.most_quantity - this.least_quantity + fortune + 1);
+        if (this.min_qty >= this.max_qty)
+            return this.min_qty;
+        return this.min_qty + random.nextInt(this.max_qty - this.min_qty + fortune + 1);
     }
-
 }

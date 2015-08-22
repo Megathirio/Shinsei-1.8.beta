@@ -6,10 +6,13 @@ import net.minecraft.item.Item;
 
 public class BaseItem extends Item{
 
-    public BaseItem(String unlocalizedName){
+    public BaseItem(String name, CreativeTabs tab){
         super();
+        this.setUnlocalizedName(name);
+        this.setCreativeTab(tab);
+    }
 
-        this.setUnlocalizedName(unlocalizedName);
-        this.setCreativeTab(ShinseiTabs.ITEMS_TAB);
+    public BaseItem(String name){
+        this(name, ShinseiTabs.ITEMS_TAB);
     }
 }

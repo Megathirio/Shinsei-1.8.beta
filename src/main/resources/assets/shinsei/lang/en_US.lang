@@ -1,22 +1,53 @@
 < en_US.lang - English localization file for the mod Shinsei >
 
 # Creative Tabs
-itemGroup.shinsei:ore_tab=Shinsei Ores
+itemGroup.shinsei:metals_tab=Shinsei Metals
 itemGroup.shinsei:blocks_tab=Shinsei Blocks
+itemGroup.shinsei:gems_tab=Shinsei Gems
 itemGroup.shinsei:tools_tab=Shinsei Tools
 itemGroup.shinsei:food_tab=Shinsei Food
 itemGroup.shinsei:items_tab=Shinsei Items
 
+#Gems
+tile.amethyst_ore.name=Amethyst
+tile.apatite_ore.name=Apatite
+
 #Ores
 tile.acanthite_ore.name=Acanthite
-tile.amethyst_ore.name=Amethyst
+tile.barite_ore.name=Barite
 tile.bauxite_ore.name=Bauxite
+tile.bismuth_ore.name=Bismuth
+tile.bornite_ore.name=Bornite
+tile.cassiterite_ore.name=Cassiterite
+tile.chalcopyrite_ore.name=Chalcopyrite
+tile.chromite_ore.name=Chromite
+tile.cinnabar_ore.name=Cinnabar
+tile.cobaltite_ore.name=Cobaltite
+tile.cryolite_ore.name=Cryolite
+tile.galena_ore.name=Galena
+tile.hematite_ore.name=Hematite
+tile.ilmenite_ore.name=Ilmenite
+tile.molybdenite_ore.name=Molybdenite
+tile.pentlandite_ore.name=Pentlandite
+tile.pyrolusite_ore.name=Pyrolusite
+tile.realgar_ore.name=Realgar
+tile.rutile_ore.name=Rutile
+tile.scheelite_ore.name=Scheelite
+tile.sperrylite_ore.name=Sperrylite
+tile.sphalerite_ore.name=Sphalerite
+tile.stibnite_ore.name=Stibnite
+tile.sylvite_ore.name=Sylvite
+tile.tantalite_ore.name=Tantalite
+tile.uraninite_ore.name=Uraninite
+
+#Minerals
 tile.halite_ore.name=Halite
 tile.meteorite.name=Meteorite
 
 #Blocks
 tile.aluminum_block.name=Aluminum Block
 tile.amethyst_block.name=Amethyst Block
+tile.apatite_block.name=Apatite Block
 tile.silver_block.name=Silver Block
 
 tile.brick.gray.name=Gray Bricks
@@ -96,6 +127,7 @@ item.amethyst_gem.name=Amethyst
 item.amethyst_dust.name=Amethyst Dust
 item.amethyst_dust_charged.name=Charged Amethyst Dust
 item.amethyst_dust_infused.name=Infused Amethyst Dust
+item.apatite_gem.name=Apatite
 
 #Food
 item.cured_beef.name=Cured Beef
