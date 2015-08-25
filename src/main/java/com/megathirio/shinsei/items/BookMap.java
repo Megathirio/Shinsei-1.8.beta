@@ -15,6 +15,7 @@ public class BookMap {
         bookMap.put(Names.books.PICKAXE, new BookPickaxe(Names.books.PICKAXE));
         bookMap.put(Names.books.SHOVEL, new BookShovel(Names.books.SHOVEL));
         bookMap.put(Names.books.SWORD, new BookSword(Names.books.SWORD));
+        bookMap.put(Names.books.SHINSEI, new BookShinsei(Names.books.SHINSEI));
     }
 
     public static HashMap<String, Item> getBookMap() {

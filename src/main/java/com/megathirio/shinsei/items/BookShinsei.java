@@ -14,7 +14,7 @@ public class BookShinsei extends Item{
         super();
         this.setMaxStackSize(1);
         this.setUnlocalizedName(name);
-        this.setCreativeTab(ShinseiTabs.TOOLS_TAB);
+        this.setCreativeTab(ShinseiTabs.ITEMS_TAB);
     }
 
     @Override
