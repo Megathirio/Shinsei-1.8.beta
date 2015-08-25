@@ -25,6 +25,13 @@ public class ShinseiTabs {
         }
     };
 
+    public static final CreativeTabs MACHINES_TAB = new CreativeTabs(Ref.RESOURCE_PREFIX + "machines_tab") {
+        @Override
+        public Item getTabIconItem() {
+            return Item.getItemFromBlock(MetalBlocks.getBlock(Names.ores.ACANTHITE));
+        }
+    };
+
     public static final CreativeTabs TOOLS_TAB = new CreativeTabs(Ref.RESOURCE_PREFIX + "tools_tab") {
         @Override
         public Item getTabIconItem() {
