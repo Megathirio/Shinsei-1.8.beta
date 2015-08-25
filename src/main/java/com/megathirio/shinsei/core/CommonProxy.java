@@ -2,8 +2,10 @@ package com.megathirio.shinsei.core;
 
 import com.megathirio.shinsei.blocks.GemBlocks;
 import com.megathirio.shinsei.blocks.MetalBlocks;
+import com.megathirio.shinsei.items.Books;
 import com.megathirio.shinsei.items.GemItems;
 import com.megathirio.shinsei.items.MetalItems;
+import com.megathirio.shinsei.items.Tools;
 import com.megathirio.shinsei.world.ShinseiWorldGen;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -17,6 +19,8 @@ public class CommonProxy {
         GemBlocks.createGemBlocks();
         MetalItems.createMetalItems();
         MetalBlocks.createMetalBlocks();
+        Tools.createTools();
+        Books.createBooks();
     }
 
     public void init(FMLInitializationEvent e){

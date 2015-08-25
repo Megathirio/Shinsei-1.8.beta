@@ -140,10 +140,12 @@ item.split_wood.name=Split Wood
 
 #Tools
 item.book_axe.name=Forestry Vol. I
+item.book_chisel.name=Sculpting Vol. I
 item.book_hoe.name=Agronomy Vol. I
 item.book_pickaxe.name=Mineralogy Vol. I
 item.book_shovel.name=Geology Vol. I
 item.book_sword.name=Hoplology Vol. I
+item.book_shinsei.name=Shinsei Vol. I
 
 item.bone_axe.name=Bone Axe
 item.flint_axe.name=Flint Axe

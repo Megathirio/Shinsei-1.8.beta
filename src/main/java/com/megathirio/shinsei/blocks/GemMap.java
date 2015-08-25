@@ -17,6 +17,7 @@ public class GemMap {
 
     public static void addGems() {
         gemMap.put(new BaseGem(Names.ores.AMETHYST, Material.rock, GemItems.getItem(Names.gems.AMETHYST), 2, 4), Names.ores.AMETHYST);
+        gemMap.put(new BaseGem(Names.ores.APATITE, Material.rock, GemItems.getItem(Names.gems.APATITE), 2, 4), Names.ores.APATITE);
 /*
         gemMap.put(new BaseGem(Names.ores.BERYL, Material.rock, GemItems.getItem(Names.gems.AQUAMARINE), 7.5, 12.1, 2, 4), Names.ores.APATITE);
         gemMap.put(new BaseGem(Names.ores.APATITE, Material.rock, GemItems.getItem(Names.gems.APATITE), 2, 4), Names.ores.APATITE);
